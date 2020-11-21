@@ -2,7 +2,7 @@
 
 var cell = document.getElementsByTagName("td");
 
-for(var i=0;i<cell.length;i++)
+for(var i=0;i<15;i++)
 {
-    cell[i].textContent = '1';
+    cell[Math.floor((Math.random() * cell.length))].textContent =  Math.floor((Math.random() * 9)+1);
 }
