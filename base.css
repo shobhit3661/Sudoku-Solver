@@ -1,5 +1,8 @@
 /* with css reset */
 * { box-sizing: border-box; }
+#b4{
+  margin-left: 700px;
+}
 table {
    margin: 10px;
  }

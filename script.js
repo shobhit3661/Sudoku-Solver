@@ -1,17 +1,19 @@
 //get values
 
 var cell = document.getElementsByTagName("td");
+var start = document.querySelector("#st");
+var restart = document.querySelector("#re");
+var solve = document.querySelector("#so");
+var reset = document.querySelector("#b4");
+//check button calls
 
-//check for a solution
+start.addEventListener('click',startTheGame);
+//start button
 
-
-
-//check 
-
-
-
-//fill random values
-for(var i=0;i<15;i++)
+function startTheGame()
 {
-    cell[i].textContent =  Math.floor((Math.random() * 9)+1);
+  for(var i=0;i<15;i++)
+  {
+      cell[i].textContent =  Math.floor((Math.random() * 9)+1);
+  }
 }
