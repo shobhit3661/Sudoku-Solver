@@ -10,14 +10,27 @@ var clicked = true;
 //check button calls
 start.addEventListener('click',startTheGame);
 reset.addEventListener('click',resetTable);
+restart.addEventListener('click',startNewGame);
 
+//restart new Game
+
+function startNewGame()
+{
+  clicked = true;
+  startTheGame();
+}
 
 //reset button reset the table
 function resetTable()
 {
-    for(var i=0;i<cell.length;i++)
+    for(var i=0;i<initialMatrix.length;i++)
     {
-      initialMatrix[i].textContent = cell[i].textContent;
+      console.log(initialMatrix[i].textContent);
+    }
+    cell[0].textContent = "2";
+    for(var i=0;i<initialMatrix.length;i++)
+    {
+      cell[i].textContent = initialMatrix[i].textContent;
     }
 }
 
