@@ -1,4 +1,10 @@
-/* with css reset */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 * { box-sizing: border-box; }
 #b4{
   margin-left: 700px;

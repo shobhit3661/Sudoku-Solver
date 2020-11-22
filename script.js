@@ -41,7 +41,7 @@ function startTheGame()
   {
     for(var i=0;i<38;i++)
     {
-        cell[Math.floor((Math.random() * cell.length))].textContent =  Math.floor((Math.random() * 9)+1);
+        cell[Math.floor((Math.random() * cell.length))].textContent =  Math.floor((Math.random()*9)+1);
     }
     initialMatrix = cell;
     clicked = false;
