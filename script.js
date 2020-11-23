@@ -11,12 +11,23 @@ var clicked = true;
 start.addEventListener('click',startTheGame);
 reset.addEventListener('click',resetTable);
 restart.addEventListener('click',startNewGame);
+//debug section
+function debug()
+{
+  for(var i=0;i<cell.length;i++)
+  {
+    console.log(cell[i].textContent);
+  }
+}
 
 //restart new Game
-
 function startNewGame()
 {
   clicked = true;
+  for(var i=0;i<cell.length;i++)
+  {
+    cell[i].textContent = "";
+  }
   startTheGame();
 }
 
@@ -27,7 +38,6 @@ function resetTable()
     {
       console.log(initialMatrix[i].textContent);
     }
-    cell[0].textContent = "2";
     for(var i=0;i<initialMatrix.length;i++)
     {
       cell[i].textContent = initialMatrix[i].textContent;
@@ -43,6 +53,7 @@ function startTheGame()
     {
         cell[Math.floor((Math.random() * cell.length))].textContent =  Math.floor((Math.random()*9)+1);
     }
+    debug();
     initialMatrix = cell;
     clicked = false;
     return;
