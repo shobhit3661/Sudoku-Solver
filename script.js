@@ -32,14 +32,17 @@ function startNewGame()
 }
 
 //reset button reset the table
+function isEmpty(element) {
+  return (element.textContent.trim() && element.childElementCount == 0);
+}
 function resetTable()
 {
     for(var i=0;i<initialMatrix.length;i++)
     {
-      console.log(initialMatrix[i].textContent);
-    }
-    for(var i=0;i<initialMatrix.length;i++)
-    {
+      if(!isEmpty(cell[i]))
+        {
+          continue;
+        }
       cell[i].textContent = initialMatrix[i].textContent;
     }
 }
@@ -53,7 +56,6 @@ function startTheGame()
     {
         cell[Math.floor((Math.random() * cell.length))].textContent =  Math.floor((Math.random()*9)+1);
     }
-    debug();
     initialMatrix = cell;
     clicked = false;
     return;
